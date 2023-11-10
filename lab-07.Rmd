@@ -24,12 +24,20 @@ evals<-read.csv("data/evals.csv", row.names=1)
 1.  Visualize the distribution of `score` in the dataframe `evals`.
 
 ```{r viz-score}
-# add code here
+meansc <- mean(evals$score)
+sdsc <- sd(evals$score)
+sc <- evals$score
+
+ data <- dnorm(sc, mean = meansc, sd = sdsc)
+plot(data, main = "Probability Density Plot")
+
+
+
+
+#*Add your other details and narratives here.*
+
+#2.  Visualize and describe the relationship between `score` and `bty_avg` using `geom_point()` to represent the data. 
 ```
-
-*Add your other details and narratives here.*
-
-2.  Visualize and describe the relationship between `score` and `bty_avg` using `geom_point()` to represent the data. 
 
 ```{r scatterplot}
 # add code here
